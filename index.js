@@ -70,9 +70,9 @@ class SideMenu extends React.Component {
     });
   }
 
-  componentWillReceiveProps(props) {
-    if (typeof props.isOpen !== 'undefined' && this.isOpen !== props.isOpen) {
-      this.openMenu(props.isOpen);
+  componentWillReceiveProps(nextProps) {
+    if (typeof nextProps.isOpen !== 'undefined' && this.props.isOpen !== nextProps.isOpen) {
+      this.openMenu(nextProps.isOpen);
     }
   }
 
